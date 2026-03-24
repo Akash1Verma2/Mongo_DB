@@ -19,13 +19,21 @@ const userSchema = new mongoose.Schema( {
 
 const User = mongoose.model("User", userSchema);
 
-User.findByIdAndUpdate('69c254d5f25af4b703fa29da', { age: 45}, { new: true })
+User.deleteMany({ age: 48})
     .then((res) => {
         console.log(res);
-})
+    })
     .catch((err) => {
         console.log(err);
     })
+
+// User.findByIdAndUpdate('69c254d5f25af4b703fa29da', { age: 45}, { new: true })
+//     .then((res) => {
+//         console.log(res);
+// })
+//     .catch((err) => {
+//         console.log(err);
+//     })
 
 // User.findById("69c254d5f25af4b703fa29da")
 //     .then((res) => {
