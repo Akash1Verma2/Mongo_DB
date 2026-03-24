@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema( {
 
 const User = mongoose.model("User", userSchema);
 
-User.findByIdAndDelete('69c254d5f25af4b703fa29d9', {new: true})
+User.findOneAndDelete({age: 55 }, {new: true})
     .then((res) => {
         console.log(res);
     })
