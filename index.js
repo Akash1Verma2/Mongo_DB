@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema( {
 
 const User = mongoose.model("User", userSchema);
 
-User.updateOne({name: "Bruce"}, {age: 49})
+User.findByIdAndUpdate('69c254d5f25af4b703fa29da', { age: 45}, { new: true })
     .then((res) => {
         console.log(res);
 })
